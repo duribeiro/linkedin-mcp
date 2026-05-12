@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linkedin-mcp"
+version = "1.0.0"
+description = "MCP server for LinkedIn API — profile, posts, articles, feed, and insights"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=1.26.0",
+    "httpx>=0.28.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+linkedin-mcp = "server:main"
+
+[tool.setuptools]
+py-modules = ["server", "auth", "tools"]
