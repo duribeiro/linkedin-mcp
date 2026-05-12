@@ -28,16 +28,14 @@ def register_profile_tools(server, auth: LinkedInAuth):
             r.raise_for_status()
             parts["basic"] = r.json()
 
-        # LiteProfile via /v2/me
+        # LiteProfile — reusa dados do basic (evita /v2/me que exige scope r_liteprofile)
         if sections in ("all", "positions", "education", "skills"):
-            async with httpx.AsyncClient() as client:
-                me_headers = {
-                    "Authorization": f"Bearer {await auth.get_access_token()}",
-                    "LinkedIn-Version": "202510",
-                }
-                r = await client.get("https://api.linkedin.com/v2/me", headers=me_headers)
-                r.raise_for_status()
-                parts["liteprofile"] = r.json()
+            parts["liteprofile"] = {
+                "id": parts["basic"].get("sub", ""),
+                "localizedFirstName": parts["basic"].get("given_name", ""),
+                "localizedLastName": parts["basic"].get("family_name", ""),
+                "profilePicture": parts["basic"].get("picture", ""),
+            }
 
         # Experience / positions
         if sections in ("all", "positions"):

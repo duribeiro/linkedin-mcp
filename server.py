@@ -58,10 +58,12 @@ async def get_my_profile(sections: str = "all") -> list[TextContent]:
         parts["basic"] = r.json()
 
     if sections in ("all", "liteprofile"):
-        async with httpx.AsyncClient() as client:
-            r = await client.get("https://api.linkedin.com/v2/me", headers=headers)
-            r.raise_for_status()
-            parts["liteprofile"] = r.json()
+        parts["liteprofile"] = {
+            "id": parts["basic"].get("sub", ""),
+            "localizedFirstName": parts["basic"].get("given_name", ""),
+            "localizedLastName": parts["basic"].get("family_name", ""),
+            "profilePicture": parts["basic"].get("picture", ""),
+        }
 
     return [TextContent(type="text", text=json.dumps(parts, indent=2, ensure_ascii=False))]
 
