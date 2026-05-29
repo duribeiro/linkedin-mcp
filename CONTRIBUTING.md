@@ -2,26 +2,26 @@
 
 ## 🌿 Branch Strategy
 
-- `main` — produção, protegida. Só recebe merge de `dev` via PR aprovado.
-- `dev` — integração. Features convergem aqui antes de subir pra `main`.
-- `feature/*` — branches de trabalho individuais. Efêmeras — nascem, recebem commits, abrem PR contra `dev` e morrem após merge.
-- `fix/*` — correções de bugs.
-- `docs/*` — documentação.
-- `ci/*` — CI/CD.
+- `main` — production, protected. Only receives merges from `dev` via approved PR.
+- `dev` — integration. Features converge here before going up to `main`.
+- `feature/*` — individual work branches. Ephemeral — born, committed, PR'd against `dev`, and deleted after merge.
+- `fix/*` — bug fixes.
+- `docs/*` — documentation.
+- `ci/*` — CI/CD pipeline changes.
 
-⚠️ **Sempre `dev`, nunca `develop`.**
+⚠️ **Always `dev`, never `develop`.**
 
 ## 📝 Commits
 
-Seguimos [Conventional Commits](https://www.conventionalcommits.org/):
+We follow [Conventional Commits](https://www.conventionalcommits.org/):
 
 ```
-type(scope): descrição curta
+type(scope): short description
 ```
 
-**Tipos:** `feat`, `fix`, `refactor`, `docs`, `test`, `ci`, `chore`, `perf`
+**Types:** `feat`, `fix`, `refactor`, `docs`, `test`, `ci`, `chore`, `perf`
 
-**Exemplos:**
+**Examples:**
 ```
 feat(profile): add extended profile endpoint
 fix(auth): handle expired token gracefully
@@ -30,25 +30,25 @@ docs(readme): add setup instructions
 
 ## 🔀 Pull Requests
 
-1. Crie sua branch a partir de `dev`
-2. Faça commits com mensagens padronizadas
-3. Abra PR contra `dev` com:
-   - Título no formato conventional commit
-   - Descrição clara do que foi feito
-   - Como testar
-   - Screenshots se houver mudança visual
-   - Issues relacionadas (`Closes #X`)
-4. Aguarde review e CI verde
-5. Merge squash (`feature/*` → `dev`) ou merge commit (`dev` → `main`)
+1. Create your branch from `dev`
+2. Commit with standardized messages
+3. Open PR against `dev` with:
+   - Title in conventional commit format
+   - Clear description of what was done
+   - How to test
+   - Screenshots if there are visual changes
+   - Related issues (`Closes #X`)
+4. Wait for review and green CI
+5. Squash merge (`feature/*` → `dev`) or merge commit (`dev` → `main`)
 
-## 🏷️ Versionamento
+## 🏷️ Versioning
 
 [SemVer](https://semver.org/): `MAJOR.MINOR.PATCH`
-- MAJOR: quebra compatibilidade (muda API pública)
-- MINOR: nova feature compatível (novo endpoint)
-- PATCH: correção de bug
+- MAJOR: breaking changes (public API change)
+- MINOR: backwards-compatible new feature (new endpoint)
+- PATCH: bug fix
 
-## 🧰 Setup Local
+## 🧰 Local Setup
 
 ```bash
 git clone git@github.com:duribeiro/linkedin-mcp.git
@@ -57,7 +57,7 @@ python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env
-# Preencha CLIENT_ID e CLIENT_SECRET do LinkedIn
+# Fill in CLIENT_ID and CLIENT_SECRET from LinkedIn
 ```
 
-Consulte o `README.md` para instruções detalhadas.
+See `README.md` for detailed instructions.

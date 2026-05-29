@@ -1,14 +1,14 @@
-## O que foi feito
+## What was done
 
-<!-- Descreva as mudanças -->
+<!-- Describe the changes -->
 
-## Como testar
+## How to test
 
-<!-- Passos pra verificar -->
+<!-- Steps to verify -->
 
 ## Screenshots
 
-<!-- Se aplicável -->
+<!-- If applicable -->
 
 ## Issues
 
