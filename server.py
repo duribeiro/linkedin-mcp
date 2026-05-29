@@ -12,6 +12,7 @@ Autor: Theo (Hermes Agent) — Licença MIT
 
 import json
 import logging
+import httpx
 
 from mcp.server import Server
 from mcp.server.stdio import stdio_server
@@ -30,8 +31,6 @@ auth = LinkedInAuth()
 # Tool implementations
 # ═══════════════════════════════════════════════════════════════════════
 
-import httpx
-
 
 async def _get_headers():
     token = await auth.get_access_token()
@@ -45,8 +44,6 @@ async def _get_headers():
 # ── Profile ──────────────────────────────────────────────────────────
 
 async def get_my_profile(sections: str = "all") -> list[TextContent]:
-    headers = await _get_headers()
-    person_urn = await auth.get_person_urn()
     parts = {}
 
     async with httpx.AsyncClient() as client:
