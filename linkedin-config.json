@@ -1,0 +1,11 @@
+{
+  "auth_url": "https://www.linkedin.com/oauth/v2/authorization",
+  "token_url": "https://www.linkedin.com/oauth/v2/accessToken",
+  "default_scopes": [
+    "openid",
+    "profile",
+    "email",
+    "w_member_social"
+  ],
+  "default_redirect": "http://localhost:8080/callback"
+}
