@@ -39,7 +39,7 @@ def register_post_tools(server, auth: LinkedInAuth):
             from .articles import _register_image, _upload_image_binary
 
             image_urn = await _register_image(auth, person_urn)
-            image_data = await _upload_image_binary(auth, image_urn, image_url)
+            await _upload_image_binary(auth, image_urn, image_url)
             media.append({
                 "media": image_urn,
                 "status": "READY",

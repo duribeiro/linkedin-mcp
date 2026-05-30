@@ -34,7 +34,6 @@ async def _register_image(auth: LinkedInAuth, person_urn: str) -> str:
         r = await client.post(ASSETS_URL, headers=headers, json=body)
         r.raise_for_status()
         data = r.json()
-        upload_url = data["value"]["uploadMechanism"]["com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest"]["uploadUrl"]
         asset_urn = data["value"]["asset"]
         return asset_urn
 
@@ -139,8 +138,6 @@ def register_article_tools(server, auth: LinkedInAuth):
         async with httpx.AsyncClient(timeout=60) as client:
             r = await client.post(UGC_URL, headers=headers, json=body)
 
-            import json as _json
-
             result = {
                 "status": r.status_code,
                 "share_id": r.headers.get("X-RestLi-Id", ""),
@@ -167,7 +164,6 @@ def register_article_tools(server, auth: LinkedInAuth):
         headers = await auth.get_headers()
 
         # Usa LinkedIn Shares API pra buscar posts do tipo ARTICLE
-        person_id = person_urn.split(":")[-1]
         url = f"https://api.linkedin.com/v2/shares?q=owners&owners={person_urn}&count={count}&sortBy=CREATED"
 
         async with httpx.AsyncClient(timeout=30) as client:

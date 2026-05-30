@@ -16,11 +16,18 @@ load_dotenv(os.path.expanduser("~/.secrets/linkedin/.env"))
 
 logger = logging.getLogger("linkedin.auth")
 
-AUTH_URL = "https://www.linkedin.com/oauth/v2/authorization"
-TOKEN_URL = "https://www.linkedin.com/oauth/v2/accessToken"
-DEFAULT_SCOPES = ["openid", "profile", "email", "w_member_social"]
-DEFAULT_REDIRECT = "http://localhost:8080/callback"
+def load_config():
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    config_path = os.path.join(base_dir, "linkedin_config.json")
+    with open(config_path) as f:
+        return json.load(f)
 
+
+_config = load_config()
+AUTH_URL = _config.get("auth_url")
+TOKEN_URL = _config.get("token_url")
+DEFAULT_SCOPES = _config.get("default_scopes")
+DEFAULT_REDIRECT = _config.get("default_redirect")
 
 class LinkedInAuth:
     """Gerencia OAuth 2.0 do LinkedIn: login interativo + refresh transparente."""

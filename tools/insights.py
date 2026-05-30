@@ -46,8 +46,6 @@ def register_insight_tools(server, auth: LinkedInAuth):
         headers = await auth.get_headers()
         person_urn = await auth.get_person_urn()
 
-        url = f"https://api.linkedin.com/v2/networkSizes/{person_urn}?edgeType=CompanyFollowedSize"
-
         results = {}
 
         async with httpx.AsyncClient(timeout=20) as client:
