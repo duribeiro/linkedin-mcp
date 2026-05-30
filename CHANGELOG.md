@@ -5,6 +5,34 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0](https://github.com/duribeiro/linkedin-mcp/compare/linkedin-mcp-v1.1.0...linkedin-mcp-v1.2.0) (2026-05-30)
+
+
+### Features
+
+* add release-please GitHub Actions workflow and config ([2f31d39](https://github.com/duribeiro/linkedin-mcp/commit/2f31d399814a71f5e0014a33bd07e7e2d689544b))
+* configure automated release-please workflow ([a45a900](https://github.com/duribeiro/linkedin-mcp/commit/a45a90083ad48d3ff515f66507e8d8ee3159c22b))
+* migrate to /rest/posts API and add image upload support ([#2](https://github.com/duribeiro/linkedin-mcp/issues/2)) ([e364406](https://github.com/duribeiro/linkedin-mcp/commit/e3644064ae94662679571938b459d7944ba8f183))
+* migrate to /rest/posts API, add upload_image, share_link, and format_linkedin ([1467d2d](https://github.com/duribeiro/linkedin-mcp/commit/1467d2dd3a724083731bce1c083a6324449bda86))
+
+
+### Bug Fixes
+
+* populate release-please workflow content ([639103e](https://github.com/duribeiro/linkedin-mcp/commit/639103e40ba267af6cbb97d430d88c0df2ed9bb4))
+* populate release-please workflow content ([#4](https://github.com/duribeiro/linkedin-mcp/issues/4)) ([0351266](https://github.com/duribeiro/linkedin-mcp/commit/03512663c16b8b1de5a2f297322732f653a50f24))
+* remove /v2/me calls — reuse /v2/userinfo for liteprofile ([8096fdf](https://github.com/duribeiro/linkedin-mcp/commit/8096fdfd816dfeb1927647dfb92d55496c184e03))
+* remove duplicate asyncio import ([e04f124](https://github.com/duribeiro/linkedin-mcp/commit/e04f124eee8f9c645ac08a849d217a26ee900ddf))
+* rename linkedin-config.json -&gt; linkedin_config.json for auth.py import ([960772b](https://github.com/duribeiro/linkedin-mcp/commit/960772b5e5bbb8539136742a391af98f8bc00748))
+* resolve all ruff lint errors (F401, F841, E402) ([3875bee](https://github.com/duribeiro/linkedin-mcp/commit/3875beec192e9eefe7e084174387b9554e204354))
+* resolve Codex review feedback on config path and create_post image_urn ([c048b64](https://github.com/duribeiro/linkedin-mcp/commit/c048b6471effba9e506d9782202dbf577ae030c7))
+
+
+### Documentation
+
+* add CONTRIBUTING.md, CHANGELOG.md, PR template, and CI workflow ([31673d1](https://github.com/duribeiro/linkedin-mcp/commit/31673d18801a16c6c29864b49eac241ce7ea2a33))
+* translate CHANGELOG, CONTRIBUTING, and PR template to English ([0aa3c4a](https://github.com/duribeiro/linkedin-mcp/commit/0aa3c4a115d07bacdf41157e0c5433717aa2f065))
+* update README and CHANGELOG for release v1.1.0 ([dbff614](https://github.com/duribeiro/linkedin-mcp/commit/dbff614366212032ee676e038585ce7f471bf95f))
+
 ## [1.1.0] - 2026-05-30
 
 ### ✨ Feat
