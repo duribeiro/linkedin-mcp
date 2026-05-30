@@ -17,7 +17,9 @@ load_dotenv(os.path.expanduser("~/.secrets/linkedin/.env"))
 logger = logging.getLogger("linkedin.auth")
 
 def load_config():
-    with open("linkedin_config.json") as f:
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    config_path = os.path.join(base_dir, "linkedin_config.json")
+    with open(config_path) as f:
         return json.load(f)
 
 

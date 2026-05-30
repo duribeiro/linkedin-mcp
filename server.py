@@ -268,6 +268,7 @@ async def create_post(
     person_urn = await auth.get_person_urn()
     headers = await _get_headers()
     headers["Content-Type"] = "application/json"
+    image_urn = None
 
     body: dict = {
         "author": person_urn,
