@@ -20,7 +20,6 @@ Nota: /v2/shares, /v2/ugcPosts e /v2/socialActions/.../shareStatistics
 Autor: Theo (Hermes Agent) — Licença MIT
 """
 
-import asyncio
 import json
 import logging
 import os
