@@ -14,8 +14,9 @@ def test_server_has_tools():
 
     expected = {
         "get_my_profile",
+        "upload_image",
         "create_post",
-        "create_article",
+        "share_link",
         "get_my_articles",
         "get_share_stats",
         "get_my_feed",
