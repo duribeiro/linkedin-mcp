@@ -1,12 +1,38 @@
 # LinkedIn MCP Server
 
+[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/duribeiro/linkedin-mcp/releases)
+
 MCP (Model Context Protocol) server for the LinkedIn API. Give your AI agents native access to your LinkedIn profile, feed, posts, articles, and insights — no browser automation needed.
+
+## 📁 Project Structure
+
+```
+.
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── tools/
+│   ├── articles.py
+│   ├── feed.py
+│   ├── insights.py
+│   ├── posts.py
+│   └── profile.py
+├── tests/
+│   └── test_basic.py
+├── auth.py
+├── linkedin_config.json
+├── server.py
+├── pyproject.toml
+├── requirements.txt
+├── README.md
+└── CHANGELOG.md
+```
 
 ## ✨ Features
 
 - 🔐 **OAuth 2.0 (3-legged)** — secure, standards-compliant auth with auto-refresh
-- 📝 **Posts** — create text posts with optional link cards
-- 📄 **Articles** — publish long-form articles
+- 📝 **Posts** — create text posts with optional link/image
+- 🔗 **Share Link** — share a link with a customized preview card
 - 👤 **Profile** — read your own profile data
 - 📰 **Feed** — browse your LinkedIn feed
 - 📊 **Insights** — get post/article share stats (impressions, likes, comments)
@@ -17,8 +43,8 @@ MCP (Model Context Protocol) server for the LinkedIn API. Give your AI agents na
 |------|-------------|
 | `get_my_profile` | Fetch your LinkedIn profile |
 | `get_my_feed` | Browse your LinkedIn feed |
-| `create_post` | Create a text post (with optional link) |
-| `create_article` | Publish a long-form article |
+| `create_post` | Create a text post (with optional link/image) |
+| `share_link` | Share a link with a customized preview card |
 | `get_my_articles` | List your published articles |
 | `get_share_stats` | Get metrics for a post/article |
 
