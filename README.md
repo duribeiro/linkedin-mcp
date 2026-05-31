@@ -1,4 +1,4 @@
-# LinkedIn MCP Server
+# LinkedIn Model Context Protocol Server (Moura Edition)
 
 [![Version](https://img.shields.io/static/v1?label=version&message=1.3.0&color=blue)](https://github.com/duribeiro/linkedin-mcp/releases) <!-- x-release-please-version -->
 
