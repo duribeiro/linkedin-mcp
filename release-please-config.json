@@ -4,7 +4,20 @@
       "package-name": "linkedin-mcp",
       "release-type": "python",
       "version-file": "pyproject.toml",
-      "changelog-path": "CHANGELOG.md"
+      "changelog-path": "CHANGELOG.md",
+      "changelog-sections": [
+        {"type": "feat", "section": "✨ Feat", "hidden": false},
+        {"type": "fix", "section": "🔧 Fix", "hidden": false},
+        {"type": "perf", "section": "🚀 Perf", "hidden": false},
+        {"type": "refactor", "section": "♻️ Refactor", "hidden": false},
+        {"type": "drop", "section": "🗑️ Drop", "hidden": false},
+        {"type": "deps", "section": "📦 Dependencies", "hidden": false},
+        {"type": "hotfix", "section": "🚑 Hotfix", "hidden": false},
+        {"type": "docs", "section": "📝 Docs", "hidden": false}
+      ],
+      "extra-files": [
+        "README.md"
+      ]
     }
   },
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
