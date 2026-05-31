@@ -1,6 +1,6 @@
 # LinkedIn MCP Server
 
-[![Version](https://img.shields.io/badge/version-1.3.0)](https://github.com/duribeiro/linkedin-mcp/releases) <!-- x-release-please-version -->
+[![Version](https://img.shields.io/static/v1?label=version&message=1.3.0&color=blue)](https://github.com/duribeiro/linkedin-mcp/releases) <!-- x-release-please-version -->
 
 MCP (Model Context Protocol) server for the LinkedIn API. Give your AI agents native access to your LinkedIn profile, feed, posts, articles, and insights — no browser automation needed.
 
