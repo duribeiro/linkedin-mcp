@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.1](https://github.com/duribeiro/linkedin-mcp/compare/linkedin-mcp-v1.3.0...linkedin-mcp-v1.3.1) (2026-05-31)
+
+
+### 🔧 Fix
+
+* adjust README version badge URL to prevent semver parsing issues ([5851453](https://github.com/duribeiro/linkedin-mcp/commit/5851453704b9339d4db6cb5d4eb9f388bc531447))
+* adjust README version badge URL to prevent semver parsing issues ([5851453](https://github.com/duribeiro/linkedin-mcp/commit/5851453704b9339d4db6cb5d4eb9f388bc531447))
+* adjust README version badge URL to prevent semver parsing issues ([f875a35](https://github.com/duribeiro/linkedin-mcp/commit/f875a35797f567c803913ca0aa01b20299038661))
+
+
+### 📝 Docs
+
+* customize readme title as duribeiro ([a24ec59](https://github.com/duribeiro/linkedin-mcp/commit/a24ec59d7e17868c6cd2d20547efa13fee5eb8e0))
+* edit readme title as mouraneto ([d178128](https://github.com/duribeiro/linkedin-mcp/commit/d178128db8c112078604857337da22d642a83b77))
+
 ## [1.3.0](https://github.com/duribeiro/linkedin-mcp/compare/linkedin-mcp-v1.2.0...linkedin-mcp-v1.3.0) (2026-05-31)
 
 
