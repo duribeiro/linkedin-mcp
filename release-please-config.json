@@ -11,6 +11,7 @@
         {"type": "perf", "section": "🚀 Perf", "hidden": false},
         {"type": "refactor", "section": "♻️ Refactor", "hidden": false},
         {"type": "drop", "section": "🗑️ Drop", "hidden": false},
+        {"type": "deps", "section": "📦 Dependencies", "hidden": false},
         {"type": "hotfix", "section": "🚑 Hotfix", "hidden": false},
         {"type": "docs", "section": "📝 Docs", "hidden": false}
       ],
